@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // material
 import { Box } from '@mui/material';
-import cleverLogo from '../assets/images/Logoclever.svg';
+import cleverLogo from '../assets/icons/Logoclever.svg';
 
 // ----------------------------------------------------------------------
 

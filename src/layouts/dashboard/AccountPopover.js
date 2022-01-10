@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import { useRef, useState } from 'react';
-import homeFill from '@iconify/icons-eva/home-fill';
+import bxsHomeSmile from '@iconify/icons-bx/bxs-home-smile';
 import personFill from '@iconify/icons-eva/person-fill';
 import settings2Fill from '@iconify/icons-eva/settings-2-fill';
 import { Link as RouterLink } from 'react-router-dom';
@@ -16,17 +16,17 @@ import account from '../../_mocks_/account';
 
 const MENU_OPTIONS = [
   {
-    label: 'Home',
-    icon: homeFill,
+    label: 'Início',
+    icon: bxsHomeSmile,
     linkTo: '/'
   },
   {
-    label: 'Profile',
+    label: 'Perfil',
     icon: personFill,
     linkTo: '#'
   },
   {
-    label: 'Settings',
+    label: 'Configurações',
     icon: settings2Fill,
     linkTo: '#'
   }
@@ -80,7 +80,7 @@ export default function AccountPopover() {
           <Typography variant="subtitle1" noWrap>
             {account.displayName}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
+          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: 12 }} noWrap>
             {account.email}
           </Typography>
         </Box>
@@ -111,7 +111,7 @@ export default function AccountPopover() {
 
         <Box sx={{ p: 2, pt: 1.5 }}>
           <Button fullWidth color="inherit" variant="outlined">
-            Logout
+            Desconectar
           </Button>
         </Box>
       </MenuPopover>

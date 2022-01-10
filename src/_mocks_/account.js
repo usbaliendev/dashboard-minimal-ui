@@ -1,4 +1,4 @@
-import userImage from '../assets/images/funcionaria.png';
+import userImage from '../assets/avatar_1.jpg';
 
 // ----------------------------------------------------------------------
 
