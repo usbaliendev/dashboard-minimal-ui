@@ -1,11 +1,12 @@
-## Minimal [(Free version)](https://minimal-kit-react.vercel.app/)
+## Minimal Dashboard
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![license](https://img.shields.io/badge/license-GNU3-blue.svg)
 
-> Free React Admin Dashboard made with Material-UI components and React.
+> React Admin Dashboard made with Material-UI components and React.
 
 ![preview](public/static/preview.png)
 
+<!---just
 | [Minimal Free](https://minimal-kit-react.vercel.app/) | [Minimal](https://material-ui.com/store/items/minimal-dashboard/) |
 | ----------------------------------------------------- | :---------------------------------------------------------------- |
 | **7** Demo pages                                      | **42+** demo pages                                                |
@@ -14,6 +15,7 @@
 | -                                                     | ✓ [More components](https://minimals.cc/components)               |
 | -                                                     | ✓ TypeScript version                                              |
 | -                                                     | ✓ Design files (Figma & Sketch)                                   |
+--->
 
 ## Page demo
 
