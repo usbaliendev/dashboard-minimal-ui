@@ -1,0 +1,58 @@
+[
+    {
+        "idpizza_config": 49,
+        "pizza_config_formato": "file",
+        "pizza_config_nomevar": "telaInicial",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "7b5ca04fffde20ac04771fbe90ca22651596201289.gif"
+    },
+    {
+        "idpizza_config": 50,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "preferencial",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "0"
+    },
+    {
+        "idpizza_config": 51,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "categoria",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "0"
+    },
+    {
+        "idpizza_config": 52,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "precoCategoria",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "0"
+    },
+    {
+        "idpizza_config": 53,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "precoPizza",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "0"
+    },
+    {
+        "idpizza_config": 54,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "remover",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "0"
+    },
+    {
+        "idpizza_config": 55,
+        "pizza_config_formato": "booleano",
+        "pizza_config_nomevar": "assada",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "1"
+    },
+    {
+        "idpizza_config": 56,
+        "pizza_config_formato": "file",
+        "pizza_config_nomevar": "telaFinal",
+        "pizza_config_sessao": "interface",
+        "pizza_config_valor": "bdbbe73b977495b5412416092c57e0541596201289.jpg"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id_categoria": 15,
+        "icon": "bx bxs-pizza",
+        "categoria_img": "39ef619be6ae0da65debbb7737d8face1600723233.jpg",
+        "categoria_nome": "Pizzas Doces",
+        "categoria_precode": 0.0,
+        "categoria_precopor": 0.0
+    },
+    {
+        "id_categoria": 14, 
+        "icon": "bx bxs-pizza",
+        "categoria_img": "0cf18d3f6f0d3d32fdae9609ee98cbf41600718402.jpg",
+        "categoria_nome": "Pizzas Salgadas",
+        "categoria_precode": 0.0,
+        "categoria_precopor": 0.0
+    },
+    {
+        "id_categoria": 13,
+        "icon": "bx bxs-pizza",
+        "categoria_img": "0cf18d3f6f0d3d32fdae9609ee98cbf41600718402.jpg",
+        "categoria_nome": "Pizzas Especiais",
+        "categoria_precode": 0.0,
+        "categoria_precopor": 0.0
+    },
+    {
+        "id_categoria": 12,
+        "icon": "bx bxs-pizza",
+        "categoria_img": "0cf18d3f6f0d3d32fdae9609ee98cbf41600718402.jpg",
+        "categoria_nome": "Pizzas Premium",
+        "categoria_precode": 0.0,
+        "categoria_precopor": 0.0
+    }
+]

@@ -1,0 +1,512 @@
+[
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 10,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "9f9e68eaa468a89a25aa21f7e19c0ad01600800647.jpg",
+        "pizza_item_nome": "Açucar",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 22,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "42cdad0d8d9358aa1ddb6b9fcd4a60ac1600804485.jpg",
+        "pizza_item_nome": "Gorgonzola",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 26,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "266f7b48ac5361f67824c2c6410d99a11600804556.jpg",
+        "pizza_item_nome": "Molho de Tomate",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 32,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "cdb4352a679a20a1189da9441da780311600804700.jpg",
+        "pizza_item_nome": "Pimentão",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 33,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "7dc2a897e67f247f9d1c2d3e6dd436971600804719.jpg",
+        "pizza_item_nome": "Presunto",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 34,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "efbfbedcef7a099559e3f7f53a2809821600804732.jpg",
+        "pizza_item_nome": "Provolone",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 35,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "54165b8cc229ce645467afa588088bb21600804752.jpg",
+        "pizza_item_nome": "Rúcula",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 36,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "88d40e4974c938ed4083f8dab6549cd11600804766.jpg",
+        "pizza_item_nome": "Tomate",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 37,
+        "pizza_item_add": 0,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "a1f0a5cb8e1f999ada60d0e2ae3214881600804788.jpg",
+        "pizza_item_nome": "Tomate Seco",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 38,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "6ee4835df308db3368195c8f0fa51a811621444633.jpg",
+        "pizza_item_nome": "Presunto parma",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 39,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "af59d0d67289d6bc9ff667e3088a31f91621444675.jpg",
+        "pizza_item_nome": "Salsa picada",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 40,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "ae99dbaeba6a9e25c75f5cd9951dc8121621445337.jpg",
+        "pizza_item_nome": "Atum",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 15,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "13c7aea8beb9d8a01a79ddf3e64212e11600804312.jpg",
+        "pizza_item_nome": "Linguiça calabresa",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 41,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "b3eb0558fc68a21085a47eef5affe95a1621446213.jpg",
+        "pizza_item_nome": "Pimenta calabresa",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 42,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "84c6413eca071cce15d9926f06314a051621446985.jpg",
+        "pizza_item_nome": "Camarão ao molho",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 43,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "a39f341b9c7e5a6456b5bf7e83fc25951621447377.jpg",
+        "pizza_item_nome": "Cogumelo fatiado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 44,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "356ed579855e3b948f4e4ebb8ab7ae911621447814.jpg",
+        "pizza_item_nome": "Filé mignon fatiado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 21,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "b0ea531bb545fe640fed3f8bc78b03581600804465.jpg",
+        "pizza_item_nome": "Frango desfiado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 30,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "8951e3ff03cd0a44b839d734a7479f8d1600804661.jpg",
+        "pizza_item_nome": "Palmito picado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 45,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "6b80717914979270da0b70c37d13e8051621449856.jpg",
+        "pizza_item_nome": "Pepperoni",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 46,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "316a3860db0d0db0a359e70fc16a66241621450525.png",
+        "pizza_item_nome": "Parmesão",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 47,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "442bed2bf0cd4e90a5cdc28195b1bf8b1621450540.jpg",
+        "pizza_item_nome": "Cheddar",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 48,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "5445fb280de11b4ef5adcbd07c53562c1621450720.png",
+        "pizza_item_nome": "Salame italiano",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 49,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "3a0f2ae25cf378034d3ce9483b5636ea1621451242.jpg",
+        "pizza_item_nome": "Linguiça suína",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 50,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "60197e72170e427978df677995a91ab51621451506.jpg",
+        "pizza_item_nome": "Ervilha",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 51,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "a876e2ba64154937ff5c56f02261b3471621451526.jpg",
+        "pizza_item_nome": "Brócolis",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 52,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "91b7a4cca001fef7bc99459a4ffaa80e1621453532.jpeg",
+        "pizza_item_nome": "Leite Condensado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 53,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "1a8d501cb1a83a316a0f2a913e24252b1621453858.jpg",
+        "pizza_item_nome": "Abacaxi",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 54,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "30348aef8162f91e1a3f8cfb99f7e6c81621454000.jpg",
+        "pizza_item_nome": "Pêssego",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 55,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "3c8cecf355408a6545a46441ac1748751621454018.jpg",
+        "pizza_item_nome": "Figo",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 56,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "d7fa14aeeb3377e6792ecc33b69ca65b1621454039.jpg",
+        "pizza_item_nome": "Cereja",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 57,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "5a769580c36a632f51ac2166bdcf294c1621454316.jpg",
+        "pizza_item_nome": "Coco ralado",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 24,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "9a8b8cffb68ad91926fca8f66573e2db1600804524.jpg",
+        "pizza_item_nome": "Manjericão",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 59,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "fe86b0497a19a366b3cc0f7929d460ec1621454559.png",
+        "pizza_item_nome": "Goiabada",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 60,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "d27ccb79d77b5a85506e50acd2dda8011621454708.jpeg",
+        "pizza_item_nome": "Morango",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 13,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "de44cdd11c626fae3a5403683d14e8201600804078.png",
+        "pizza_item_nome": "Bacon",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 11,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "1d37f70ffc7ccd9ba349a5ac2e96d45c1600800975.jpg",
+        "pizza_item_nome": "Azeitona",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 12,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "5f86a023c3fea1ca1ee58befc8c78a621600801222.png",
+        "pizza_item_nome": "Azeitona Preta",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 14,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "f09eae62fffec19fbdbd763c46f6113d1600804104.jpg",
+        "pizza_item_nome": "Banana",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 16,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "80844230ef248479aa16a1e02494bd331600804338.png",
+        "pizza_item_nome": "Canela",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 20,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "a885293564c4a684bf432e43f03fc21b1600804442.jpg",
+        "pizza_item_nome": "Confete",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 19,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "aace5df3b6d4fc6983151dbe52e0a8001600804385.jpg",
+        "pizza_item_nome": "Chocolate",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 18,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "6f29e580649845b35a822e5b7a3ddaeb1600804368.jpg",
+        "pizza_item_nome": "Cebola",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 17,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "c79be3fe9992c0e5fa0ce9697729808d1600804352.jpg",
+        "pizza_item_nome": "Catupiry",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 23,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "7dc2a897e67f247f9d1c2d3e6dd436971600804501.jpg",
+        "pizza_item_nome": "Lombo Canadense",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 25,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "1255faa406de3aea9284028a786f852c1600804539.jpg",
+        "pizza_item_nome": "Milho",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 31,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "9a1c95116a63b49582e47f8d22c9f3bb1600804680.jpg",
+        "pizza_item_nome": "Peito de Peru",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 29,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "77336cc048eb95ca2dcb51df59ed53f81600804644.jpg",
+        "pizza_item_nome": "Ovo",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 28,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "b859d895b348f7219fd76b0def99ea331600804627.jpg",
+        "pizza_item_nome": "Orégano",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 14,
+        "idpizza_item": 27,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "47b796e1af02f946e7586f25dd13e52d1600804606.jpg",
+        "pizza_item_nome": "Mussarela",
+        "pizza_item_preco": 0.0
+    },
+    {
+        "idpizza_categoria": 15,
+        "idpizza_item": 61,
+        "pizza_item_add": 1,
+        "pizza_item_codebar": "",
+        "pizza_item_codigo": "",
+        "pizza_item_img": "27eaa69a43bdf3de2adc00714dbefb771624387884.jpg",
+        "pizza_item_nome": "Castanha de Caju",
+        "pizza_item_preco": 0.0
+    }
+]

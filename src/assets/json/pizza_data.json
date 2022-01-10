@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "bx bx-shopping-bag",
+    "title": "Categorias",
+    "route": "/pizzas/categorias"
+  },
+  {
+    "icon": "bx bxs-food-menu",
+    "title": "Sabores",
+    "route": "/pizzas/sabores"
+  },
+  {
+    "icon": "bx bx-spray-can",
+    "title": "Ingredientes",
+    "route": "/pizzas/ingredientes"
+  },
+  {
+    "icon": "bx bxs-devices",
+    "title": "Totems",
+    "route": "/pizzas/totens"
+  }
+]
