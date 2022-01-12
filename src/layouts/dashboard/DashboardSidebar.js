@@ -121,7 +121,7 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
       <Box sx={{ flexGrow: 1 }} />
 
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <ButtonStyle component={RouterLink} to="/faq">
+        <ButtonStyle component={RouterLink} to="/dashboard/faq">
           <ItemIconStyle>{getIcon(calendarQuestionMkFilled)}</ItemIconStyle>
           <TextStyle>FAQ</TextStyle>
         </ButtonStyle>

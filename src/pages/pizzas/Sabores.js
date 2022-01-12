@@ -3,15 +3,10 @@ import { useState } from 'react';
 // material
 import { Container, Stack, Typography } from '@mui/material';
 // components
-import Page from '../components/Page';
-import {
-  ProductSort,
-  ProductList,
-  ProductCartWidget,
-  ProductFilterSidebar
-} from '../components/_dashboard/products';
+import Page from '../../components/Page';
+import { PizzaSort, PizzaList, PizzaFilterSidebar } from '../../components/_dashboard/pizza';
 //
-import PRODUCTS from '../_mocks_/products';
+import SABORES from '../../_mocks_/sabores';
 
 // ----------------------------------------------------------------------
 
@@ -47,10 +42,10 @@ export default function EcommerceShop() {
   };
 
   return (
-    <Page title="Dashboard | Products">
+    <Page title="Dashboard | Sabores">
       <Container>
         <Typography variant="h4" sx={{ mb: 1 }}>
-          Products
+          Sabores
         </Typography>
 
         <Stack
@@ -61,19 +56,18 @@ export default function EcommerceShop() {
           sx={{ mb: 2 }}
         >
           <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
-            <ProductFilterSidebar
+            <PizzaFilterSidebar
               formik={formik}
               isOpenFilter={openFilter}
               onResetFilter={handleResetFilter}
               onOpenFilter={handleOpenFilter}
               onCloseFilter={handleCloseFilter}
             />
-            <ProductSort />
+            <PizzaSort />
           </Stack>
         </Stack>
 
-        <ProductList products={PRODUCTS} />
-        <ProductCartWidget />
+        <PizzaList pizzas={SABORES} />
       </Container>
     </Page>
   );

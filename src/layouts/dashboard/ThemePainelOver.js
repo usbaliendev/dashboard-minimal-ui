@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Icon } from '@iconify/react';
+import { useDispatch } from 'react-redux';
 // material
 import { alpha } from '@mui/material/styles';
 import {
+  Avatar,
   Box,
-  Button,
   Divider,
   IconButton,
   Typography,
@@ -17,47 +18,52 @@ import {
 //  icons
 import paintBrush from '@iconify/icons-fluent/paint-brush-arrow-up-24-filled';
 // components
-import Scrollbar from '../../components/Scrollbar';
 import MenuPopover from '../../components/MenuPopover';
 
-const mode_settings = [
+const modeSettings = [
   {
     id: 'light',
-    name: 'Light',
-    background: 'light-background',
+    name: 'Claro',
+    label: 'C',
+    background: 'theme.lightbg',
     class: 'theme-mode-light'
   },
   {
     id: 'dark',
-    name: 'Dark',
-    background: 'dark-background',
+    name: 'Escuro',
+    label: 'E',
+    background: 'theme.darkbg',
     class: 'theme-mode-dark'
   }
 ];
 
-const color_settings = [
+const colorSettings = [
   {
     id: 'blue',
     name: 'Azul',
-    background: 'blue-color',
+    label: 'A',
+    background: 'theme.pallete.themes.blue',
     class: 'theme-color-blue'
   },
   {
     id: 'red',
     name: 'Vermelho',
-    background: 'red-color',
+    label: 'V',
+    background: 'theme.red',
     class: 'theme-color-red'
   },
   {
     id: 'green',
     name: 'Verde',
-    background: 'green-color',
+    label: 'V',
+    background: 'theme.green',
     class: 'theme-color-green'
   },
   {
     id: 'orange',
     name: 'Laranja',
-    background: 'orange-color',
+    label: 'L',
+    background: 'theme.orange',
     class: 'theme-color-orange'
   }
 ];
@@ -102,22 +108,58 @@ export default function ThemePainelOver() {
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
               Escolha um tema para seu dashboard
             </Typography>
-            <List
-              disablePadding
-              subheader={
-                <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
-                  Tema Principal
-                </ListSubheader>
-              }
-            >
-              {mode_settings.map((item, index) => (
-                <ListItemButton key={index} disableGutters sx={{ py: 1.5, px: 2.5, mt: '1px' }}>
-                  <ListItemText>Claro</ListItemText>
-                </ListItemButton>
-              ))}
-            </List>
           </Box>
         </Box>
+
+        <Divider />
+
+        <List
+          disablePadding
+          subheader={
+            <ListSubheader disableSticky sx={{ py: 1, px: 2.5, mt: 1, typography: 'overline' }}>
+              Tema Principal
+            </ListSubheader>
+          }
+        >
+          {modeSettings.map((mode) => (
+            <ListItemButton
+              key={mode.id}
+              disableGutters
+              sx={{ px: 2.5 }}
+              /* onClick={() => setMode(item)} */
+            >
+              <ListItemAvatar>
+                <Avatar sx={{ bgcolor: mode.background }}>{mode.label}</Avatar>
+              </ListItemAvatar>
+              <ListItemText>
+                <Typography variant="subtitle2">{mode.name}</Typography>
+              </ListItemText>
+            </ListItemButton>
+          ))}
+        </List>
+
+        <Divider />
+
+        <List
+          disablePadding
+          subheader={
+            <ListSubheader disableSticky sx={{ py: 1, px: 2.5, mt: 1, typography: 'overline' }}>
+              Cores
+            </ListSubheader>
+          }
+          sx={{ mb: 1 }}
+        >
+          {colorSettings.map((color) => (
+            <ListItemButton key={color.id} disableGutters sx={{ px: 2.5 }}>
+              <ListItemAvatar>
+                <Avatar sx={{ bgcolor: color.background }}>{color.label}</Avatar>
+              </ListItemAvatar>
+              <ListItemText>
+                <Typography variant="subtitle2">{color.name}</Typography>
+              </ListItemText>
+            </ListItemButton>
+          ))}
+        </List>
       </MenuPopover>
     </>
   );

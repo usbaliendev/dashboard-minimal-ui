@@ -17,31 +17,31 @@ const getIcon = (name) => <Icon icon={name} width={22} height={22} />;
 
 const sidebarConfig = [
   {
-    title: 'dashboard',
+    title: 'Dashboard',
     path: '/dashboard/app',
     icon: getIcon(pieChart2Fill)
   },
   {
-    title: 'produtos',
+    title: 'Produtos',
     path: '/dashboard/produtos',
     icon: getIcon(shoppingBagFill),
     children: [
       {
         title: 'Pizzas',
-        path: '/dashboard/produtos/pizzas'
+        path: '/dashboard/pizzas'
       },
       {
         title: 'Açougue',
-        path: '/dashboard/produtos/acougue'
+        path: '/dashboard/acougue'
       },
       {
         title: 'Config Produtos',
-        path: '/dashboard/produtos/configProd'
+        path: '/dashboard/configProd'
       }
     ]
   },
   {
-    title: 'pizzas',
+    title: 'Pizzas',
     path: '/dashboard/pizzas',
     icon: getIcon(pizzaFill),
     children: [
@@ -64,7 +64,7 @@ const sidebarConfig = [
     ]
   },
   {
-    title: 'açougue',
+    title: 'Açougue',
     path: '/dashboard/acougue',
     icon: getIcon(meatIcon),
     children: [
@@ -83,7 +83,7 @@ const sidebarConfig = [
     ]
   },
   {
-    title: 'relatórios',
+    title: 'Relatórios',
     path: '/dashboard/relatorios',
     icon: getIcon(areaChartOutlined)
   },
@@ -107,27 +107,27 @@ const sidebarConfig = [
     ]
   },
   {
-    title: 'tabela',
+    title: 'Tabela',
     path: '/dashboard/tabela',
     icon: getIcon(peopleFill)
   },
   {
-    title: 'product',
+    title: 'Product',
     path: '/dashboard/products',
     icon: getIcon(shoppingBagFill)
   },
   {
-    title: 'blog',
+    title: 'Blog',
     path: '/dashboard/blog',
     icon: getIcon(fileTextFill)
   },
   {
-    title: 'login',
+    title: 'Login',
     path: '/login',
     icon: getIcon(lockFill)
   },
   {
-    title: 'register',
+    title: 'Register',
     path: '/register',
     icon: getIcon(personAddFill)
   },
