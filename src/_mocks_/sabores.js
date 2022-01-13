@@ -5,17 +5,6 @@ import saboresjson from './pizza_sabores.json';
 
 const SABORES = [];
 
-const SABORES_COLOR = [
-  '#00AB55',
-  '#000000',
-  '#FFFFFF',
-  '#FFC0CB',
-  '#FF4842',
-  '#1890FF',
-  '#94D82D',
-  '#FFC107'
-];
-
 function addJsonData() {
   const addBody = [];
   console.log(addBody);
@@ -24,8 +13,12 @@ function addJsonData() {
     const newItem = {
       id_categoria: item.idpizza_categoria,
       id_sabor: item.idpizza_sabores,
+      sabor_codebar: item.pizza_sabores_codebar,
+      sabor_code: item.pizza_sabores_codigo,
+      sabor_desc: item.pizza_sabores_descricao,
+      sabor_ico: item.pizza_sabores_icon,
       sabor_img: item.pizza_sabores_img,
-      sabor_items: item.pizza_sabores_itens,
+      sabor_itens: item.pizza_sabores_itens,
       sabor_nome: item.pizza_sabores_nome,
       sabor_precode: item.pizza_sabores_precode,
       sabor_precopor: item.pizza_sabores_precopor,
@@ -45,27 +38,13 @@ console.log(sabLenght);
 
 // ----------------------------------------------------------------------
 
-const sabores = [...Array(sabLenght)].map((_, index) => {
-  const setIndex = index + 1;
-
-  return {
-    id: SABORES[index].id_sabor,
-    /* cover: mockImgProduct(setIndex), */
-    cover: SABORES[index].sabor_img,
-    name: SABORES[index].sabor_nome,
-    price: SABORES[index].sabor_precode,
-    priceSale: SABORES[index].sabor_precopor,
-    colors:
-      (setIndex === 1 && SABORES_COLOR.slice(0, 2)) ||
-      (setIndex === 2 && SABORES_COLOR.slice(1, 3)) ||
-      (setIndex === 3 && SABORES_COLOR.slice(2, 4)) ||
-      (setIndex === 4 && SABORES_COLOR.slice(3, 6)) ||
-      (setIndex === 23 && SABORES_COLOR.slice(4, 6)) ||
-      (setIndex === 24 && SABORES_COLOR.slice(5, 6)) ||
-      SABORES_COLOR,
-    /* status: sample(['ativo', 'novo', '', '']) */
-    status: SABORES[index].sabor_status === 1 ? 'ativo' : 'desativado'
-  };
-});
+const sabores = [...Array(sabLenght)].map((_, index) => ({
+  id: SABORES[index].id_sabor,
+  cover: SABORES[index].sabor_img,
+  name: SABORES[index].sabor_nome,
+  price: SABORES[index].sabor_precode,
+  priceSale: SABORES[index].sabor_precopor,
+  status: SABORES[index].sabor_status === 1 ? 'ativo' : 'desativado'
+}));
 
 export default sabores;

@@ -3,12 +3,12 @@ import { Box, Grid, Container, Typography } from '@mui/material';
 // components
 import Page from '../../components/Page';
 import {
+  AppCardVendasD,
+  AppCardVendasT,
+  AppCardPedidosT,
+  AppCardReceitaM,
   AppTasks,
-  AppNewUsers,
-  AppBugReports,
-  AppItemOrders,
   AppNewsUpdate,
-  AppWeeklySales,
   AppOrderTimeline,
   AppCurrentVisits,
   AppWebsiteVisits,
@@ -28,16 +28,16 @@ export default function Pizzas() {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWeeklySales />
+            <AppCardVendasT />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppNewUsers />
+            <AppCardVendasD />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppItemOrders />
+            <AppCardReceitaM />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppBugReports />
+            <AppCardPedidosT />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
