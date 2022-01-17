@@ -50,18 +50,32 @@ export default function PizzaCard({ pizza }) {
         <ProductImgStyle alt={name} src={cover} />
       </Box>
 
-      <Stack spacing={2} alignItems="center" justifyContent="space-between" sx={{ px: 3, pb: 2 }}>
-        <Box justifyContent="space-between">
-          <Link to="#" color="inherit" underline="hover" component={RouterLink}>
-            <Typography variant="subtitle" noWrap sx={{ fontWeight: 700 }}>
-              {name}
-            </Typography>
-          </Link>
-          <MoreMenu />
-        </Box>
+      <Stack alignItems="center" sx={{ pb: 2 }}>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ width: '100%' }}
+        >
+          <Box component="div" sx={{ justifyContent: 'center', widht: '100%' }}>
+            <Link to="#" color="inherit" underline="hover" component={RouterLink}>
+              <Typography variant="subtitle" noWrap sx={{ pl: 2, fontWeight: 700 }}>
+                {name}
+              </Typography>
+            </Link>
+          </Box>
+          <Box component="div" sx={{ right: 0 }}>
+            <MoreMenu />
+          </Box>
+        </Stack>
 
-        <Stack direction="row" alignItems="center" justifyContent="space-evenly">
-          {/* <ColorPreview colors={colors} /> */}
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          className="ESSE"
+          sx={{ margin: 0 }}
+        >
           <Typography variant="subtitle1">
             <Typography
               component="span"

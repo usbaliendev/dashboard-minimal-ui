@@ -29,18 +29,24 @@ export default function MoreMenu() {
         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
-        <MenuItem sx={{ color: 'text.secondary' }}>
-          <ListItemIcon>
+        <MenuItem>
+          <ListItemIcon sx={{ color: 'primary.main' }}>
             <Icon icon={trash2Outline} width={24} height={24} />
           </ListItemIcon>
-          <ListItemText primary="Delete" primaryTypographyProps={{ variant: 'body2' }} />
+          <ListItemText
+            primary="Delete"
+            primaryTypographyProps={{ variant: 'body2', fontWeight: 800 }}
+          />
         </MenuItem>
 
-        <MenuItem component={RouterLink} to="#" sx={{ color: 'text.secondary' }}>
-          <ListItemIcon>
+        <MenuItem component={RouterLink} to="#">
+          <ListItemIcon sx={{ color: 'primary.main' }}>
             <Icon icon={editFill} width={24} height={24} />
           </ListItemIcon>
-          <ListItemText primary="Edit" primaryTypographyProps={{ variant: 'body2' }} />
+          <ListItemText
+            primary="Edit"
+            primaryTypographyProps={{ variant: 'body2', fontWeight: 800 }}
+          />
         </MenuItem>
       </Menu>
     </>

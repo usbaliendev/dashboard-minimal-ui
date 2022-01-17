@@ -41,8 +41,10 @@ export default function ListHead({
         {headLabel.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.alignRight ? 'right' : 'left'}
+            align={headCell.align}
             sortDirection={orderBy === headCell.id ? order : false}
+            padding="none"
+            sx={{ width: 'fit-content' }}
           >
             <TableSortLabel
               hideSortIcon

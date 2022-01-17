@@ -27,15 +27,18 @@ import Scrollbar from '../../components/Scrollbar';
 import SearchNotFound from '../../components/SearchNotFound';
 import { ListHead, ListToolbar } from '../../components/_dashboard/table';
 import MoreMenu from '../../components/MoreMenu';
-//
-import USERLIST from '../../_mocks_/user';
+// utils
+import INGREDIENTES from '../../_mocks_/ingredientes';
+import { fRealBr } from '../../utils/formatNumber';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'id', label: 'ID', alignRight: false },
-  { id: 'nome', label: 'Nome', alignRight: false },
-  { id: 'nome', label: 'Nome', alignRight: false },
+  { id: 'id', label: 'ID', align: 'center' },
+  { id: 'categoria', label: 'Categoria', align: 'center' },
+  { id: 'nome', label: 'Nome', align: 'left' },
+  { id: 'preco', label: 'Preço', align: 'center' },
+  { id: 'status', label: 'Status', align: 'center' },
   { id: '' }
 ];
 
@@ -76,7 +79,7 @@ export default function Categorias() {
   const [selected, setSelected] = useState([]);
   const [orderBy, setOrderBy] = useState('name');
   const [filterName, setFilterName] = useState('');
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -86,7 +89,7 @@ export default function Categorias() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = USERLIST.map((n) => n.name);
+      const newSelecteds = INGREDIENTES.map((n) => n.name);
       setSelected(newSelecteds);
       return;
     }
@@ -124,14 +127,14 @@ export default function Categorias() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - USERLIST.length) : 0;
+  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - INGREDIENTES.length) : 0;
 
-  const filteredUsers = applySortFilter(USERLIST, getComparator(order, orderBy), filterName);
+  const filteredUsers = applySortFilter(INGREDIENTES, getComparator(order, orderBy), filterName);
 
   const isUserNotFound = filteredUsers.length === 0;
 
   return (
-    <Page title="Dashboard | Categorias">
+    <Page title="Dashboard | Ingredientes">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
@@ -161,7 +164,7 @@ export default function Categorias() {
                   order={order}
                   orderBy={orderBy}
                   headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
+                  rowCount={INGREDIENTES.length}
                   numSelected={selected.length}
                   onRequestSort={handleRequestSort}
                   onSelectAllClick={handleSelectAllClick}
@@ -170,13 +173,13 @@ export default function Categorias() {
                   {filteredUsers
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => {
-                      const { id, name, role, status, company, avatarUrl, isVerified } = row;
+                      const { idctg, idpizza, name, preco, status, cover } = row;
                       const isItemSelected = selected.indexOf(name) !== -1;
 
                       return (
                         <TableRow
                           hover
-                          key={id}
+                          key={idpizza}
                           tabIndex={-1}
                           role="checkbox"
                           selected={isItemSelected}
@@ -188,27 +191,36 @@ export default function Categorias() {
                               onChange={(event) => handleClick(event, name)}
                             />
                           </TableCell>
-                          <TableCell component="th" scope="row" padding="none">
+                          <TableCell align="center" padding="none">
+                            {idpizza}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
+                            {idctg}
+                          </TableCell>
+                          <TableCell
+                            align="center"
+                            padding="none"
+                            component="th"
+                            scope="row"
+                            size="small"
+                          >
                             <Stack direction="row" alignItems="center" spacing={2}>
-                              <Avatar alt={name} src={avatarUrl} />
+                              <Avatar alt={name} src={cover} />
                               <Typography variant="subtitle2" noWrap>
                                 {name}
                               </Typography>
                             </Stack>
                           </TableCell>
-                          <TableCell align="left">{company}</TableCell>
-                          <TableCell align="left">{role}</TableCell>
-                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
-                          <TableCell align="left">
-                            <Label
-                              variant="ghost"
-                              color={(status === 'banned' && 'error') || 'success'}
-                            >
+                          <TableCell align="center" padding="none">
+                            {fRealBr(preco)}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
+                            <Label variant="ghost" color={(status === '1' && '0') || 'success'}>
                               {sentenceCase(status)}
                             </Label>
                           </TableCell>
 
-                          <TableCell align="right">
+                          <TableCell align="right" padding="none">
                             <MoreMenu />
                           </TableCell>
                         </TableRow>
@@ -234,9 +246,9 @@ export default function Categorias() {
           </Scrollbar>
 
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
+            rowsPerPageOptions={[10, 25, 50, 75, 100]}
             component="div"
-            count={USERLIST.length}
+            count={INGREDIENTES.length}
             rowsPerPage={rowsPerPage}
             page={page}
             onPageChange={handleChangePage}

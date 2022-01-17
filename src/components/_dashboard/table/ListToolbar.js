@@ -14,6 +14,8 @@ import {
   OutlinedInput,
   InputAdornment
 } from '@mui/material';
+import { noop } from 'lodash';
+import { padding } from '@mui/system';
 
 // ----------------------------------------------------------------------
 
@@ -57,13 +59,15 @@ export default function ListToolbar({ numSelected, filterName, onFilterName }) {
     >
       {numSelected > 0 ? (
         <Typography component="div" variant="subtitle1">
-          {numSelected} selected
+          {numSelected} selecionado(s)
         </Typography>
       ) : (
         <SearchStyle
           value={filterName}
           onChange={onFilterName}
-          placeholder="Procurar dado ..."
+          placeholder="Busca ..."
+          margin="none"
+          sx={{ fontSize: 14 }}
           startAdornment={
             <InputAdornment position="start">
               <Box component={Icon} icon={searchFill} sx={{ color: 'text.disabled' }} />
@@ -73,13 +77,13 @@ export default function ListToolbar({ numSelected, filterName, onFilterName }) {
       )}
 
       {numSelected > 0 ? (
-        <Tooltip title="Delete">
+        <Tooltip title="Deletar">
           <IconButton>
             <Icon icon={trash2Fill} />
           </IconButton>
         </Tooltip>
       ) : (
-        <Tooltip title="Filter list">
+        <Tooltip title="Filtrar lista">
           <IconButton>
             <Icon icon={roundFilterList} />
           </IconButton>
