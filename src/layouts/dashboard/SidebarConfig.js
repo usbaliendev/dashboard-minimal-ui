@@ -22,25 +22,6 @@ const sidebarConfig = [
     icon: getIcon(pieChart2Fill)
   },
   {
-    title: 'Produtos',
-    path: '/dashboard/produtos',
-    icon: getIcon(shoppingBagFill),
-    children: [
-      {
-        title: 'Pizzas',
-        path: '/dashboard/pizzas'
-      },
-      {
-        title: 'Açougue',
-        path: '/dashboard/acougue'
-      },
-      {
-        title: 'Config Produtos',
-        path: '/dashboard/configProd'
-      }
-    ]
-  },
-  {
     title: 'Pizzas',
     path: '/dashboard/pizzas',
     icon: getIcon(pizzaFill),
@@ -85,16 +66,26 @@ const sidebarConfig = [
   {
     title: 'Relatórios',
     path: '/dashboard/relatorios',
-    icon: getIcon(areaChartOutlined)
+    icon: getIcon(areaChartOutlined),
+    children: [
+      {
+        title: 'Pizzas',
+        path: '/dashboard/relatorios/pizzas'
+      },
+      {
+        title: 'Açougue',
+        path: '/dashboard/relatorios/acougue'
+      }
+    ]
   },
   {
     title: 'Configurações',
-    path: '/dashboard/config',
+    path: '',
     icon: getIcon(cogIcon),
     children: [
       {
-        title: 'Sistema',
-        path: '/dashboard/config/sistema'
+        title: 'Produtos',
+        path: '/dashboard/config/produtos'
       },
       {
         title: 'Usuários',
@@ -103,6 +94,10 @@ const sidebarConfig = [
       {
         title: 'Lojas',
         path: '/dashboard/config/lojas'
+      },
+      {
+        title: 'Sistema',
+        path: '/dashboard/config/sistema'
       }
     ]
   },

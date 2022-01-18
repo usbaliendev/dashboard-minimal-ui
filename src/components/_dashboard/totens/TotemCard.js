@@ -6,13 +6,14 @@ import { styled } from '@mui/material/styles';
 // components
 import MoreMenu from '../../MoreMenu';
 // utils
-import { fRealBr } from '../../../utils/formatNumber';
+import { fCurrency } from '../../../utils/formatNumber';
 //
 import Label from '../../Label';
+import ColorPreview from '../../ColorPreview';
 
 // ----------------------------------------------------------------------
 
-const ProductImgStyle = styled('img')({
+const TotemImgStyle = styled('img')({
   top: 0,
   width: '100%',
   height: '100%',
@@ -22,12 +23,12 @@ const ProductImgStyle = styled('img')({
 
 // ----------------------------------------------------------------------
 
-PizzaCard.propTypes = {
-  pizza: PropTypes.object
+TotemCard.propTypes = {
+  totem: PropTypes.object
 };
 
-export default function PizzaCard({ pizza }) {
-  const { name, cover, price, status, priceSale } = pizza;
+export default function TotemCard({ totem }) {
+  const { id, idempresa, cover, codebar, name, status, colors } = totem;
 
   return (
     <Card>
@@ -47,10 +48,10 @@ export default function PizzaCard({ pizza }) {
             {status}
           </Label>
         )}
-        <ProductImgStyle alt={name} src={cover} />
+        <TotemImgStyle alt={name} src={cover} />
       </Box>
 
-      <Stack alignItems="center" sx={{ pb: 2 }}>
+      <Stack alignItems="center" sx={{ pb: 1, pt: 0.5 }}>
         <Stack
           direction="row"
           alignItems="center"
@@ -67,24 +68,6 @@ export default function PizzaCard({ pizza }) {
           <Box component="div" sx={{ right: 0 }}>
             <MoreMenu />
           </Box>
-        </Stack>
-
-        <Stack direction="row" alignItems="center" justifyContent="center" sx={{ margin: 0 }}>
-          <Typography variant="subtitle1">
-            <Typography
-              component="span"
-              variant="body1"
-              sx={{
-                color: 'text.disabled',
-                textDecoration: 'line-through'
-              }}
-            >
-              {priceSale && fRealBr(priceSale)}
-            </Typography>
-            &nbsp;
-            {/* {fCurrency(price)} */}
-            {fRealBr(price)}
-          </Typography>
         </Stack>
       </Stack>
     </Card>

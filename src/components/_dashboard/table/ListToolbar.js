@@ -82,13 +82,12 @@ export default function ListToolbar({ numSelected, filterName, onFilterName }) {
             <Icon icon={trash2Fill} />
           </IconButton>
         </Tooltip>
-      ) : (
-        <Tooltip title="Filtrar lista">
-          <IconButton>
-            <Icon icon={roundFilterList} />
-          </IconButton>
-        </Tooltip>
-      )}
+      ) : null}
+      {/* <Tooltip title="Filtrar lista">
+        <IconButton>
+          <Icon icon={roundFilterList} />
+        </IconButton>
+      </Tooltip> */}
     </RootStyle>
   );
 }

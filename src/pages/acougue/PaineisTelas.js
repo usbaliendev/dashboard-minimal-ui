@@ -10,11 +10,11 @@ import { Container, Stack, Typography, Button } from '@mui/material';
 import Page from '../../components/Page';
 import { TotemSort, TotemList } from '../../components/_dashboard/totens';
 //
-import TOTENS from '../../_mocks_/pizza/totens';
+import PAINEIS from '../../_mocks_/acougue/ptelas';
 
 // ----------------------------------------------------------------------
 
-export default function Totens() {
+export default function PaineisTelas() {
   const [openFilter, setOpenFilter] = useState(false);
 
   const formik = useFormik({
@@ -46,11 +46,11 @@ export default function Totens() {
   };
 
   return (
-    <Page title="Dashboard | Totens">
+    <Page title="Dashboard | Paineis|Telas">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
           <Typography variant="h4" sx={{ margin: '0' }}>
-            Totens
+            Paineis | Telas
           </Typography>
           <Button
             variant="contained"
@@ -58,7 +58,7 @@ export default function Totens() {
             to="#"
             startIcon={<Icon icon={plusFill} />}
           >
-            Novo Totem
+            Novo Painel
           </Button>
         </Stack>
 
@@ -73,7 +73,7 @@ export default function Totens() {
           </Stack>
         </Stack>
 
-        <TotemList totens={TOTENS} />
+        <TotemList totens={PAINEIS} />
       </Container>
     </Page>
   );

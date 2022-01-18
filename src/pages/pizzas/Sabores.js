@@ -1,12 +1,15 @@
 import { useFormik } from 'formik';
 import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import plusFill from '@iconify/icons-eva/plus-fill';
 // material
-import { Container, Stack, Typography } from '@mui/material';
+import { Container, Stack, Typography, Button } from '@mui/material';
 // components
 import Page from '../../components/Page';
 import { PizzaSort, PizzaList, PizzaFilterSidebar } from '../../components/_dashboard/pizza';
 //
-import SABORES from '../../_mocks_/sabores';
+import SABORES from '../../_mocks_/pizza/sabores';
 
 // ----------------------------------------------------------------------
 
@@ -44,16 +47,23 @@ export default function EcommerceShop() {
   return (
     <Page title="Dashboard | Sabores">
       <Container>
-        <Typography variant="h4" sx={{ mb: 1 }}>
-          Sabores
-        </Typography>
+        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
+          <Typography variant="h4">Sabores</Typography>
+          <Button
+            variant="contained"
+            component={RouterLink}
+            to="#"
+            startIcon={<Icon icon={plusFill} />}
+          >
+            Novo Sabor
+          </Button>
+        </Stack>
 
         <Stack
           direction="row"
           flexWrap="wrap-reverse"
           alignItems="center"
           justifyContent="flex-end"
-          sx={{ mb: 2 }}
         >
           <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
             <PizzaFilterSidebar

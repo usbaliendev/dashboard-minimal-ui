@@ -13,6 +13,8 @@ import {
   Drawer,
   Rating,
   Divider,
+  Checkbox,
+  FormGroup,
   IconButton,
   Typography,
   RadioGroup,
@@ -23,22 +25,19 @@ import Scrollbar from '../../Scrollbar';
 
 // ----------------------------------------------------------------------
 
-export const FILTER_CATEGORY_OPTIONS = [
-  { value: '15', label: 'Pizzas Doces' },
-  { value: '14', label: 'Pizzas Salgadas' },
-  { value: '13', label: 'Pizzas Especiais' },
-  { value: '12', label: 'Pizzas Premium' }
+export const SORT_BY_OPTIONS = [
+  { value: 'featured', label: 'Featured' },
+  { value: 'newest', label: 'Newest' },
+  { value: 'priceDesc', label: 'Price: High-Low' },
+  { value: 'priceAsc', label: 'Price: Low-High' }
 ];
+export const FILTER_GENDER_OPTIONS = ['Men', 'Women', 'Kids'];
+export const FILTER_CATEGORY_OPTIONS = ['All', 'Shose', 'Apparel', 'Accessories'];
 export const FILTER_RATING_OPTIONS = ['up4Star', 'up3Star', 'up2Star', 'up1Star'];
-export const FILTER_PRICE_OPTIONS = [
-  { value: 'abaixo', label: 'Abaixo R$15' },
-  { value: 'entre', label: 'Entre R$15 - R$25' },
-  { value: 'acima', label: 'Acima $25' }
-];
 
 // ----------------------------------------------------------------------
 
-PizzaFilterSidebar.propTypes = {
+TotemFilterSidebar.propTypes = {
   isOpenFilter: PropTypes.bool,
   onResetFilter: PropTypes.func,
   onOpenFilter: PropTypes.func,
@@ -46,7 +45,7 @@ PizzaFilterSidebar.propTypes = {
   formik: PropTypes.object
 };
 
-export default function PizzaFilterSidebar({
+export default function TotemFilterSidebar({
   isOpenFilter,
   onResetFilter,
   onOpenFilter,
@@ -96,39 +95,39 @@ export default function PizzaFilterSidebar({
               <Stack spacing={3} sx={{ p: 3 }}>
                 <div>
                   <Typography variant="subtitle1" gutterBottom>
-                    Categoria
+                    Gender
+                  </Typography>
+                  <FormGroup>
+                    {FILTER_GENDER_OPTIONS.map((item) => (
+                      <FormControlLabel
+                        key={item}
+                        control={
+                          <Checkbox
+                            {...getFieldProps('gender')}
+                            value={item}
+                            checked={values.gender.includes(item)}
+                          />
+                        }
+                        label={item}
+                      />
+                    ))}
+                  </FormGroup>
+                </div>
+
+                <div>
+                  <Typography variant="subtitle1" gutterBottom>
+                    Category
                   </Typography>
                   <RadioGroup {...getFieldProps('category')}>
                     {FILTER_CATEGORY_OPTIONS.map((item) => (
-                      <FormControlLabel
-                        key={item}
-                        value={item.value}
-                        control={<Radio />}
-                        label={item.label}
-                      />
+                      <FormControlLabel key={item} value={item} control={<Radio />} label={item} />
                     ))}
                   </RadioGroup>
                 </div>
 
                 <div>
                   <Typography variant="subtitle1" gutterBottom>
-                    Preço
-                  </Typography>
-                  <RadioGroup {...getFieldProps('priceRange')}>
-                    {FILTER_PRICE_OPTIONS.map((item) => (
-                      <FormControlLabel
-                        key={item.value}
-                        value={item.value}
-                        control={<Radio />}
-                        label={item.label}
-                      />
-                    ))}
-                  </RadioGroup>
-                </div>
-
-                <div>
-                  <Typography variant="subtitle1" gutterBottom>
-                    Avaliações
+                    Rating
                   </Typography>
                   <RadioGroup {...getFieldProps('rating')}>
                     {FILTER_RATING_OPTIONS.map((item, index) => (
@@ -143,7 +142,7 @@ export default function PizzaFilterSidebar({
                             checkedIcon={<Rating readOnly value={4 - index} />}
                           />
                         }
-                        label=""
+                        label="& Up"
                         sx={{
                           my: 0.5,
                           borderRadius: 1,
@@ -173,7 +172,7 @@ export default function PizzaFilterSidebar({
                 onClick={onResetFilter}
                 startIcon={<Icon icon={roundClearAll} />}
               >
-                Limpar tudo
+                Clear All
               </Button>
             </Box>
           </Drawer>

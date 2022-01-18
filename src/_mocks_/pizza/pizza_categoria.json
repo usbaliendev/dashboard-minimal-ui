@@ -1,0 +1,38 @@
+[
+  {
+    "id_categoria": 15,
+    "icon": "bx bxs-pizza",
+    "categoria_img": "/static/mock-images/pizzas/chocolate-confeti.png",
+    "categoria_nome": "Pizzas Doces",
+    "categoria_precode": 19.99,
+    "categoria_precopor": 15.99,
+    "status": 1
+  },
+  {
+    "id_categoria": 14,
+    "icon": "bx bxs-pizza",
+    "categoria_img": "/static/mock-images/pizzas/mussarela.png",
+    "categoria_nome": "Pizzas Salgadas",
+    "categoria_precode": 21.99,
+    "categoria_precopor": 19.99,
+    "status": 1
+  },
+  {
+    "id_categoria": 13,
+    "icon": "bx bxs-pizza",
+    "categoria_img": "/static/mock-images/pizzas/file-e-provolone.png",
+    "categoria_nome": "Pizzas Especiais",
+    "categoria_precode": 24.99,
+    "categoria_precopor": 21.99,
+    "status": 1
+  },
+  {
+    "id_categoria": 12,
+    "icon": "bx bxs-pizza",
+    "categoria_img": "/static/mock-images/pizzas/camarao-com-catupiry.png",
+    "categoria_nome": "Pizzas Premium",
+    "categoria_precode": 32.0,
+    "categoria_precopor": 30.0,
+    "status": 1
+  }
+]

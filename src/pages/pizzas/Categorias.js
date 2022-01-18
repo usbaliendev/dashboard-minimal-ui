@@ -28,16 +28,17 @@ import SearchNotFound from '../../components/SearchNotFound';
 import { ListHead, ListToolbar } from '../../components/_dashboard/table';
 import MoreMenu from '../../components/MoreMenu';
 //
-import USERLIST from '../../_mocks_/user';
+import CATEGORIAS from '../../_mocks_/pizza/categorias';
+import { fRealBr } from '../../utils/formatNumber';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  { id: 'id', label: 'ID', align: 'center' },
+  { id: 'nome', label: 'Nome', align: 'left' },
+  { id: 'precode', label: 'Preço de', align: 'center' },
+  { id: 'precopor', label: 'Preço por', align: 'center' },
+  { id: 'status', label: 'Status', align: 'center' },
   { id: '' }
 ];
 
@@ -88,7 +89,7 @@ export default function Categorias() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = USERLIST.map((n) => n.name);
+      const newSelecteds = CATEGORIAS.map((n) => n.name);
       setSelected(newSelecteds);
       return;
     }
@@ -126,26 +127,24 @@ export default function Categorias() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - USERLIST.length) : 0;
+  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - CATEGORIAS.length) : 0;
 
-  const filteredUsers = applySortFilter(USERLIST, getComparator(order, orderBy), filterName);
+  const filteredUsers = applySortFilter(CATEGORIAS, getComparator(order, orderBy), filterName);
 
   const isUserNotFound = filteredUsers.length === 0;
 
   return (
     <Page title="Dashboard | Categorias">
       <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
-            Categorias
-          </Typography>
+        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
+          <Typography variant="h4">Categorias</Typography>
           <Button
             variant="contained"
             component={RouterLink}
             to="#"
             startIcon={<Icon icon={plusFill} />}
           >
-            Nova Entrada
+            Nova categoria
           </Button>
         </Stack>
 
@@ -157,13 +156,13 @@ export default function Categorias() {
           />
 
           <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
+            <TableContainer sx={{ minWidth: 800, px: 3 }}>
               <Table>
                 <ListHead
                   order={order}
                   orderBy={orderBy}
                   headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
+                  rowCount={CATEGORIAS.length}
                   numSelected={selected.length}
                   onRequestSort={handleRequestSort}
                   onSelectAllClick={handleSelectAllClick}
@@ -172,7 +171,7 @@ export default function Categorias() {
                   {filteredUsers
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => {
-                      const { id, name, role, status, company, avatarUrl, isVerified } = row;
+                      const { id, img, name, precode, precopor, status } = row;
                       const isItemSelected = selected.indexOf(name) !== -1;
 
                       return (
@@ -190,27 +189,33 @@ export default function Categorias() {
                               onChange={(event) => handleClick(event, name)}
                             />
                           </TableCell>
-                          <TableCell component="th" scope="row" padding="none">
+                          <TableCell align="center" padding="normal">
+                            {id}
+                          </TableCell>
+                          <TableCell align="center" padding="none" component="th" scope="row">
                             <Stack direction="row" alignItems="center" spacing={2}>
-                              <Avatar alt={name} src={avatarUrl} />
-                              <Typography variant="subtitle2" noWrap>
+                              <Avatar alt={name} src={img} sx={{ width: 56, height: 56 }} />
+                              <Typography variant="subtitle2" noWrap sx={{ fontSize: 15 }}>
                                 {name}
                               </Typography>
                             </Stack>
                           </TableCell>
-                          <TableCell align="left">{company}</TableCell>
-                          <TableCell align="left">{role}</TableCell>
-                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
-                          <TableCell align="left">
+                          <TableCell align="center" padding="none">
+                            {fRealBr(precode)}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
+                            {fRealBr(precopor)}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
                             <Label
                               variant="ghost"
-                              color={(status === 'banned' && 'error') || 'success'}
+                              color={(status === 'desativado' && 'error') || 'success'}
                             >
                               {sentenceCase(status)}
                             </Label>
                           </TableCell>
 
-                          <TableCell align="right">
+                          <TableCell align="right" padding="none">
                             <MoreMenu />
                           </TableCell>
                         </TableRow>
@@ -236,13 +241,14 @@ export default function Categorias() {
           </Scrollbar>
 
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
+            rowsPerPageOptions={[5, 10, 15]}
             component="div"
-            count={USERLIST.length}
+            count={CATEGORIAS.length}
             rowsPerPage={rowsPerPage}
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
+            labelRowsPerPage="Itens por página"
           />
         </Card>
       </Container>

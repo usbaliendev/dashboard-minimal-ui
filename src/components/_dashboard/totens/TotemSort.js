@@ -10,11 +10,11 @@ import { Menu, Button, MenuItem, Typography } from '@mui/material';
 const SORT_BY_OPTIONS = [
   { value: 'destaques', label: 'Destaques' },
   { value: 'recentes', label: 'Recentes' },
-  { value: 'priceDesc', label: 'Preço: Maior-Menor' },
-  { value: 'priceAsc', label: 'Preço: Menor-Maior' }
+  { value: 'nameDesc', label: 'Nome: Z-A' },
+  { value: 'nameAsc', label: 'Nome: A-Z' }
 ];
 
-export default function PizzaSort() {
+export default function TotemSort() {
   const [open, setOpen] = useState(null);
 
   const handleOpen = (event) => {

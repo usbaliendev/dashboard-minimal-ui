@@ -1,0 +1,18 @@
+[
+  {
+    "id_painel": "",
+    "id_empresa": "",
+    "painel_img": "/static/mock-images/paineisTelas/painel.jpg",
+    "painel_codebar": "",
+    "painel_nome": "SuperBom I",
+    "painel_status": 1
+  },
+  {
+    "id_painel": "",
+    "id_empresa": "",
+    "painel_img": "/static/mock-images/paineisTelas/painel.jpg",
+    "painel_codebar": "",
+    "painel_nome": "SuperBom II",
+    "painel_status": 0
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "id_item": 10,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Acem KG",
+    "acougue_item_preco": 35.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 22,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Alcatra KG",
+    "acougue_item_preco": 49.9,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 26,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Capa de Contra filé KG",
+    "acougue_item_preco": 32.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 32,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Carne de Sol KG",
+    "acougue_item_preco": 39.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 33,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Contra Filé KG",
+    "acougue_item_preco": 54.9,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 34,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Coxão Duro KG",
+    "acougue_item_preco": 42.9,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 35,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Coxão Mole KG",
+    "acougue_item_preco": 45.9,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 36,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Fraldinha a Vácuo KG",
+    "acougue_item_preco": 39.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 37,
+
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Lagarto KG",
+    "acougue_item_preco": 45.9,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 38,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Linguiça Suina Perdigão",
+    "acougue_item_preco": 19.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 39,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Paleta KG",
+    "acougue_item_preco": 34.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 40,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Patinho KG",
+    "acougue_item_preco": 34.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 15,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Peito Bovino KG",
+    "acougue_item_preco": 35.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 41,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Peixinho KG",
+    "acougue_item_preco": 38.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 42,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Cupin Bovino KG",
+    "acougue_item_preco": 34.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 43,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "Filé Mignon c/ Cordão KG",
+    "acougue_item_preco": 79.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 44,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "MAMINHA BOVINA",
+    "acougue_item_preco": 49.99,
+    "acougue_item_status": 1
+  },
+  {
+    "id_item": 21,
+    "acougue_item_codebar": "",
+    "acougue_item_codigo": "",
+    "acougue_item_img": "/static/mock-images/acougue/carne1.png",
+    "acougue_item_nome": "PICANHA KG ",
+    "acougue_item_preco": 89.9,
+    "acougue_item_status": 1
+  }
+]

@@ -34,7 +34,7 @@ export default function MoreMenu() {
             <Icon icon={trash2Outline} width={24} height={24} />
           </ListItemIcon>
           <ListItemText
-            primary="Delete"
+            primary="Deletar"
             primaryTypographyProps={{ variant: 'body2', fontWeight: 800 }}
           />
         </MenuItem>
@@ -44,7 +44,7 @@ export default function MoreMenu() {
             <Icon icon={editFill} width={24} height={24} />
           </ListItemIcon>
           <ListItemText
-            primary="Edit"
+            primary="Editar"
             primaryTypographyProps={{ variant: 'body2', fontWeight: 800 }}
           />
         </MenuItem>

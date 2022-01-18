@@ -27,7 +27,7 @@ import Scrollbar from '../components/Scrollbar';
 import SearchNotFound from '../components/SearchNotFound';
 import { ListHead, ListToolbar } from '../components/_dashboard/table';
 import MoreMenu from '../components/MoreMenu';
-//
+// utils
 import USERLIST from '../_mocks_/user';
 
 // ----------------------------------------------------------------------

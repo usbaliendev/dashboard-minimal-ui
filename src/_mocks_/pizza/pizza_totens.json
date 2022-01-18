@@ -1,0 +1,34 @@
+[
+  {
+    "id_totem": "",
+    "id_empresa": "",
+    "totem_img": "/static/mock-images/totens/totem_pizza.png",
+    "totem_codebar": "",
+    "totem_nome": "Veneza I",
+    "totem_status": 1
+  },
+  {
+    "id_totem": "",
+    "id_empresa": "",
+    "totem_img": "/static/mock-images/totens/totem_pizza.png",
+    "totem_codebar": "",
+    "totem_nome": "Veneza II",
+    "totem_status": 0
+  },
+  {
+    "id_totem": "",
+    "id_empresa": "",
+    "totem_img": "/static/mock-images/totens/totem_pizza.png",
+    "totem_codebar": "",
+    "totem_nome": "Veneza III",
+    "totem_status": 1
+  },
+  {
+    "id_totem": "",
+    "id_empresa": "",
+    "totem_img": "/static/mock-images/totens/totem_pizza.png",
+    "totem_codebar": "",
+    "totem_nome": "Veneza IV",
+    "totem_status": 0
+  }
+]

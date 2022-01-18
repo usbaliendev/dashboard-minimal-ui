@@ -5,19 +5,23 @@ import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 //
 import Login from './pages/Login';
 import Register from './pages/Register';
+
 import DashboardApp from './pages/DashboardApp';
-import Products from './pages/Products';
 import Pizzas from './pages/pizzas/Pizzas';
+import Acougue from './pages/acougue/Acougue';
+
 import Categorias from './pages/pizzas/Categorias';
 import Sabores from './pages/pizzas/Sabores';
 import Ingredientes from './pages/pizzas/Ingredientes';
+import Totens from './pages/pizzas/Totens';
 
-import Acougue from './pages/acougue/Acougue';
+import PaineisTelas from './pages/acougue/PaineisTelas';
 
 import Relatorios from './pages/Relatorios';
 
-import Blog from './pages/Blog';
 import Tabela from './pages/Tabela';
+import Products from './pages/Products';
+import Blog from './pages/Blog';
 import NotFound from './pages/Page404';
 
 // ----------------------------------------------------------------------
@@ -30,15 +34,20 @@ export default function Router() {
       children: [
         { element: <Navigate to="/dashboard/app" replace /> },
         { path: 'app', element: <DashboardApp /> },
-        { path: 'produtos', element: <Products /> },
-        { path: 'pizzas', element: <Pizzas /> },
+
+        { path: 'relatorios/pizzas', element: <Pizzas /> },
+        { path: 'relatorios/acougue', element: <Acougue /> },
+        { path: 'produtos/config', element: <Products /> },
+
         { path: 'pizzas/categorias', element: <Categorias /> },
         { path: 'pizzas/sabores', element: <Sabores /> },
         { path: 'pizzas/ingredientes', element: <Ingredientes /> },
-        { path: 'pizzas/totens', element: <Categorias /> },
+        { path: 'pizzas/totens', element: <Totens /> },
 
-        { path: 'acougue', element: <Acougue /> },
-        { path: 'configProd', element: <Products /> },
+        { path: 'acougue/produtos', element: <Totens /> },
+        { path: 'acougue/tabelaprecos', element: <Ingredientes /> },
+        { path: 'acougue/paineis&telas', element: <PaineisTelas /> },
+
         { path: 'relatorios', element: <Relatorios /> },
         { path: 'tabela', element: <Tabela /> },
         { path: 'products', element: <Products /> },

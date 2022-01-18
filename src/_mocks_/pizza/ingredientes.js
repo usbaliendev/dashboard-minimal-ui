@@ -1,6 +1,6 @@
 import { sample } from 'lodash';
 // utils
-import { mockImgIngr } from '../utils/mockImages';
+import { mockImgIngr } from '../../utils/mockImages';
 import ingredientesjson from './pizza_item.json';
 
 // ----------------------------------------------------------------------------------
