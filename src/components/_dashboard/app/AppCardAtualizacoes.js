@@ -57,10 +57,10 @@ function NewsItem({ news }) {
   );
 }
 
-export default function AppNewsUpdate() {
+export default function AppCardAtualizacoes({ chartData }) {
   return (
     <Card>
-      <CardHeader title="News Update" />
+      <CardHeader title="Atualizações" />
 
       <Scrollbar>
         <Stack spacing={3} sx={{ p: 3, pr: 0 }}>
@@ -80,7 +80,7 @@ export default function AppNewsUpdate() {
           component={RouterLink}
           endIcon={<Icon icon={arrowIosForwardFill} />}
         >
-          View all
+          Ver Todos
         </Button>
       </Box>
     </Card>

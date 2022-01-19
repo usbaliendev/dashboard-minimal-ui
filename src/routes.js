@@ -15,6 +15,8 @@ import Sabores from './pages/pizzas/Sabores';
 import Ingredientes from './pages/pizzas/Ingredientes';
 import Totens from './pages/pizzas/Totens';
 
+import Produtos from './pages/acougue/Produtos';
+import TabelaPrecos from './pages/acougue/TabelaPrecos';
 import PaineisTelas from './pages/acougue/PaineisTelas';
 
 import Relatorios from './pages/Relatorios';
@@ -44,11 +46,10 @@ export default function Router() {
         { path: 'pizzas/ingredientes', element: <Ingredientes /> },
         { path: 'pizzas/totens', element: <Totens /> },
 
-        { path: 'acougue/produtos', element: <Totens /> },
-        { path: 'acougue/tabelaprecos', element: <Ingredientes /> },
+        { path: 'acougue/produtos', element: <Produtos /> },
+        { path: 'acougue/tabelaprecos', element: <TabelaPrecos /> },
         { path: 'acougue/paineis&telas', element: <PaineisTelas /> },
 
-        { path: 'relatorios', element: <Relatorios /> },
         { path: 'tabela', element: <Tabela /> },
         { path: 'products', element: <Products /> },
         { path: 'blog', element: <Blog /> },

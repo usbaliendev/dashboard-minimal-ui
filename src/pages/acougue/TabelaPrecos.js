@@ -28,7 +28,7 @@ import SearchNotFound from '../../components/SearchNotFound';
 import { ListHead, ListToolbar } from '../../components/_dashboard/table';
 import MoreMenu from '../../components/MoreMenu';
 // utils
-import INGREDIENTES from '../../_mocks_/pizza/ingredientes';
+import PRODUTOS from '../../_mocks_/acougue/produtos';
 import { fRealBr } from '../../utils/formatNumber';
 
 // ----------------------------------------------------------------------
@@ -73,7 +73,7 @@ function applySortFilter(array, comparator, query) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-export default function Categorias() {
+export default function TabelaPrecos() {
   const [page, setPage] = useState(0);
   const [order, setOrder] = useState('asc');
   const [selected, setSelected] = useState([]);
@@ -89,7 +89,7 @@ export default function Categorias() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = INGREDIENTES.map((n) => n.name);
+      const newSelecteds = PRODUTOS.map((n) => n.name);
       setSelected(newSelecteds);
       return;
     }
@@ -127,9 +127,9 @@ export default function Categorias() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - INGREDIENTES.length) : 0;
+  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - PRODUTOS.length) : 0;
 
-  const filteredUsers = applySortFilter(INGREDIENTES, getComparator(order, orderBy), filterName);
+  const filteredUsers = applySortFilter(PRODUTOS, getComparator(order, orderBy), filterName);
 
   const isUserNotFound = filteredUsers.length === 0;
 
@@ -137,7 +137,7 @@ export default function Categorias() {
     <Page title="Dashboard | Ingredientes">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
-          <Typography variant="h4">Ingredientes</Typography>
+          <Typography variant="h4">Açougue | Tabela de Preços</Typography>
           <Button
             variant="contained"
             component={RouterLink}
@@ -162,7 +162,7 @@ export default function Categorias() {
                   order={order}
                   orderBy={orderBy}
                   headLabel={TABLE_HEAD}
-                  rowCount={INGREDIENTES.length}
+                  rowCount={PRODUTOS.length}
                   numSelected={selected.length}
                   onRequestSort={handleRequestSort}
                   onSelectAllClick={handleSelectAllClick}
@@ -171,13 +171,13 @@ export default function Categorias() {
                   {filteredUsers
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => {
-                      const { idctg, idpizza, name, preco, status, cover } = row;
+                      const { id, code, cover, name, preco, status } = row;
                       const isItemSelected = selected.indexOf(name) !== -1;
 
                       return (
                         <TableRow
                           hover
-                          key={idpizza}
+                          key={id}
                           tabIndex={-1}
                           role="checkbox"
                           selected={isItemSelected}
@@ -190,7 +190,7 @@ export default function Categorias() {
                             />
                           </TableCell>
                           <TableCell align="center" padding="normal">
-                            {idpizza}
+                            {id}
                           </TableCell>
                           {/* <TableCell align="center" padding="none">
                             {idctg}
@@ -249,7 +249,7 @@ export default function Categorias() {
           <TablePagination
             rowsPerPageOptions={[10, 25, 50, 75, 100]}
             component="div"
-            count={INGREDIENTES.length}
+            count={PRODUTOS.length}
             rowsPerPage={rowsPerPage}
             page={page}
             onPageChange={handleChangePage}

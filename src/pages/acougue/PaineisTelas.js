@@ -50,7 +50,7 @@ export default function PaineisTelas() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
           <Typography variant="h4" sx={{ margin: '0' }}>
-            Paineis | Telas
+            Açougue | Paineis
           </Typography>
           <Button
             variant="contained"

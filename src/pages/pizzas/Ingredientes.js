@@ -137,7 +137,7 @@ export default function Categorias() {
     <Page title="Dashboard | Ingredientes">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
-          <Typography variant="h4">Ingredientes</Typography>
+          <Typography variant="h4">Pizzas | Ingredientes</Typography>
           <Button
             variant="contained"
             component={RouterLink}

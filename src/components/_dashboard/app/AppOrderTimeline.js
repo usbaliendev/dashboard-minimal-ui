@@ -17,40 +17,40 @@ import { fDateTime } from '../../../utils/formatTime';
 
 const TIMELINES = [
   {
-    title: '1983, orders, $4220',
+    title: '1983, pedidos, $4220',
     time: faker.date.past(),
-    type: 'order1'
+    type: 'pedido1'
   },
   {
-    title: '12 Invoices have been paid',
+    title: '12 Invoices foram pagas',
     time: faker.date.past(),
-    type: 'order2'
+    type: 'pedido2'
   },
   {
-    title: 'Order #37745 from September',
+    title: 'Pedido #37745 de Setembro',
     time: faker.date.past(),
-    type: 'order3'
+    type: 'pedido3'
   },
   {
-    title: 'New order placed #XF-2356',
+    title: 'Novo pedido feito #XF-2356',
     time: faker.date.past(),
-    type: 'order4'
+    type: 'pedido4'
   },
   {
-    title: 'New order placed #XF-2346',
+    title: 'Novo pedido feito #XF-2346',
     time: faker.date.past(),
-    type: 'order5'
+    type: 'pedido5'
   }
 ];
 
 // ----------------------------------------------------------------------
 
-OrderItem.propTypes = {
+PedidoItem.propTypes = {
   item: PropTypes.object,
   isLast: PropTypes.bool
 };
 
-function OrderItem({ item, isLast }) {
+function PedidoItem({ item, isLast }) {
   const { type, title, time } = item;
   return (
     <TimelineItem>
@@ -58,10 +58,10 @@ function OrderItem({ item, isLast }) {
         <TimelineDot
           sx={{
             bgcolor:
-              (type === 'order1' && 'primary.main') ||
-              (type === 'order2' && 'success.main') ||
-              (type === 'order3' && 'info.main') ||
-              (type === 'order4' && 'warning.main') ||
+              (type === 'pedido1' && 'primary.main') ||
+              (type === 'pedido2' && 'success.main') ||
+              (type === 'pedido3' && 'info.main') ||
+              (type === 'pedido4' && 'warning.main') ||
               'error.main'
           }}
         />
@@ -77,7 +77,7 @@ function OrderItem({ item, isLast }) {
   );
 }
 
-export default function AppOrderTimeline() {
+export default function AppPedidoTimeline() {
   return (
     <Card
       sx={{
@@ -86,11 +86,11 @@ export default function AppOrderTimeline() {
         }
       }}
     >
-      <CardHeader title="Order Timeline" />
+      <CardHeader title="Timeline" />
       <CardContent>
         <Timeline>
           {TIMELINES.map((item, index) => (
-            <OrderItem key={item.title} item={item} isLast={index === TIMELINES.length - 1} />
+            <PedidoItem key={item.title} item={item} isLast={index === TIMELINES.length - 1} />
           ))}
         </Timeline>
       </CardContent>

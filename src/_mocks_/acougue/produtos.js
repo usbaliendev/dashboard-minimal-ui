@@ -29,22 +29,19 @@ function addJsonData() {
 }
 
 addJsonData();
-const ingrLenght = PRODUTOS.length;
-console.log(ingrLenght);
+const prodLenght = PRODUTOS.length;
+console.log(prodLenght);
 
 // ----------------------------------------------------------------------------------
 
-const ingredientes = [...Array(ingrLenght)].map((_, index) => ({
-  idctg: PRODUTOS[index].id_categoria,
-  idpizza: PRODUTOS[index].id_pizza,
-  add: PRODUTOS[index].add,
-  codebar: PRODUTOS[index].codebar,
+const produtos = [...Array(prodLenght)].map((_, index) => ({
+  id: PRODUTOS[index].aid,
+  codebar: PRODUTOS[index].acodebar,
   code: PRODUTOS[index].code,
-  /* cover: PRODUTOS[index].img, */
-  cover: mockImgIngr(index + 1),
+  cover: PRODUTOS[index].img,
   name: PRODUTOS[index].nome,
   preco: PRODUTOS[index].preco,
   status: PRODUTOS[index].status === 1 ? 'ativo' : 'desativado'
 }));
 
-export default ingredientes;
+export default produtos;

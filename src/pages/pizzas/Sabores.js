@@ -48,7 +48,7 @@ export default function EcommerceShop() {
     <Page title="Dashboard | Sabores">
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
-          <Typography variant="h4">Sabores</Typography>
+          <Typography variant="h4">Pizzas | Sabores</Typography>
           <Button
             variant="contained"
             component={RouterLink}

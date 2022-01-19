@@ -4,47 +4,43 @@ import { Box, Grid, Container, Typography } from '@mui/material';
 import Page from '../components/Page';
 import {
   AppTasks,
-  AppNewUsers,
-  AppBugReports,
-  AppItemOrders,
-  AppNewsUpdate,
-  AppWeeklySales,
+  AppCardAtualizacoes,
   AppOrderTimeline,
-  AppCurrentVisits,
-  AppWebsiteVisits,
+  AppGraficoPizza,
+  AppGraficoLA,
   AppTrafficBySite,
-  AppCurrentSubject,
-  AppConversionRates
+  AppGraficoRadar,
+  AppGraficoBarra
 } from '../components/_dashboard/app';
 
 // ----------------------------------------------------------------------
 
 export default function Relatorios() {
   return (
-    <Page title="Dashboard | Relatorios">
+    <Page title="Dashboard | Relatórios">
       <Container maxWidth="xl">
         <Box sx={{ pb: 5 }}>
           <Typography variant="h4">Relatórios</Typography>
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={8}>
-            <AppWebsiteVisits />
+            <AppGraficoLA />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentVisits />
+            <AppGraficoPizza />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
-            <AppConversionRates />
+            <AppGraficoBarra />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppCurrentSubject />
+            <AppGraficoRadar />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
-            <AppNewsUpdate />
+            <AppCardAtualizacoes />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>

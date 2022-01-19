@@ -50,7 +50,7 @@ export default function Totens() {
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={1}>
           <Typography variant="h4" sx={{ margin: '0' }}>
-            Totens
+            Pizzas | Totens
           </Typography>
           <Button
             variant="contained"

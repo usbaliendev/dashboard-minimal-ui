@@ -58,7 +58,7 @@ const SUCCESS = {
   main: '#54D62C',
   dark: '#229A16',
   darker: '#08660D',
-  contrastText: GREY[800]
+  contrastText: GREY[900]
 };
 const WARNING = {
   lighter: '#FFF7CD',
@@ -66,7 +66,7 @@ const WARNING = {
   main: '#FFC107',
   dark: '#B78103',
   darker: '#7A4F01',
-  contrastText: GREY[800]
+  contrastText: GREY[900]
 };
 const ACTIVE = {
   lighter: '#E9FCD4',
@@ -99,17 +99,25 @@ const THEMES = {
   dark_bg: '#2d2d2d',
   dark_subbg: '#161616',
   red: '#ed3c40',
-  blue: '#1890FF',
   green: '#54D62C',
+  blue: '#1890FF',
   orange: '#ff9400'
 };
 
 const CHART_COLORS = {
-  violet: ['#826AF9', '#9E86FF', '#D0AEFF', '#F7D2FF'],
-  blue: ['#2D99FF', '#83CFFF', '#A5F3FF', '#CCFAFF'],
-  green: ['#2CD9C5', '#60F1C8', '#A4F7CC', '#C0F2DC'],
+  red: ['#ed3c40', '#f05c5f', '#f48a8d', '#FFE7D9'],
+  green: ['#54D62C', '#54D62C', '#AAF27F', '#C0F2DC'],
+  blue: ['#2D99FF', '#74CAFF', '#A5F3FF', '#CCFAFF'],
   yellow: ['#FFE700', '#FFEF5A', '#FFF7AE', '#FFF3D6'],
-  red: ['#FF6C40', '#FF8F6D', '#FFBD98', '#FFF2D4']
+  violet: ['#826AF9', '#9E86FF', '#D0AEFF', '#F7D2FF']
+};
+
+const CHART_CX = {
+  red: '#ed3c40',
+  green: '#54D62C',
+  blue: '#2D99FF',
+  yellow: '#FFE700',
+  violet: '#826AF9'
 };
 
 const palette = {
@@ -124,8 +132,9 @@ const palette = {
   grey: GREY,
   gradients: GRADIENTS,
   chart: CHART_COLORS,
+  chartX: { ...CHART_CX },
   divider: GREY[500_24],
-  text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
+  text: { primary: GREY[900], secondary: GREY[700], disabled: GREY[500] },
   themes: {
     lightbg: THEMES.light_bg,
     lightsubbg: THEMES.light_susbbg,
