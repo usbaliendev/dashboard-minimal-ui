@@ -1,0 +1,20 @@
+[
+  {
+    "id_produto": "",
+    "produto_img": "/static/mock-images/config/pizza-shop.svg",
+    "produto_nome": "Pizzas",
+    "produto_status": 1
+  },
+  {
+    "id_produto": "",
+    "produto_img": "/static/mock-images/config/meat-shop.svg",
+    "produto_nome": "Açougue",
+    "produto_status": 1
+  },
+  {
+    "id_produto": "",
+    "produto_img": "/static/mock-images/config/wine-shop.svg",
+    "produto_nome": "Adega",
+    "produto_status": 0
+  }
+]

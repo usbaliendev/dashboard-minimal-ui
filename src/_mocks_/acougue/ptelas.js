@@ -1,7 +1,6 @@
 import { sample } from 'lodash';
 import faker from 'faker/locale/pt_BR';
 // utils
-import { mockImgIngr } from '../../utils/mockImages';
 import paineisjson from './acougue_paineis.json';
 
 // ----------------------------------------------------------------------------------

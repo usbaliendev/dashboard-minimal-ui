@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
-import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
+import { Box, Link, Divider, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
 // components
 import { Icon, InlineIcon } from '@iconify/react';
 import calendarQuestionMkFilled from '@iconify/icons-fluent/calendar-question-mark-16-filled';
@@ -43,8 +43,10 @@ const ButtonStyle = styled((props) => <Button {...props} />)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   textTransform: 'capitalize',
+  borderBottomRightRadius: 0,
+  borderBottomLeftRadius: 0,
 
-  background: theme.palette.background.neutral,
+  background: theme.palette.primary.lighter,
   paddingLeft: theme.spacing(5),
   paddingRight: theme.spacing(5),
   color: theme.palette.text.secondary
@@ -88,14 +90,18 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
   }, [pathname]);
 
   const renderContent = (
-    <Scrollbar
-      sx={{
-        height: '100%',
-        '& .simplebar-content': { height: '100%', display: 'flex', flexDirection: 'column' }
-      }}
-    >
+    <>
       <Box sx={{ px: 2.5, py: 2.5 }}>
-        <Box component={RouterLink} to="/" sx={{ display: 'inline-flex' }}>
+        <Box
+          component={RouterLink}
+          to="/"
+          sx={{
+            display: 'inline-flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%'
+          }}
+        >
           <Logo />
         </Box>
       </Box>
@@ -116,17 +122,21 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
         </Link>
       </Box>
 
-      <NavSection navConfig={sidebarConfig} />
-
-      <Box sx={{ flexGrow: 1 }} />
-
+      <Scrollbar
+        sx={{
+          height: '100%',
+          '& .simplebar-content': { height: '100%', display: 'flex', flexDirection: 'column' }
+        }}
+      >
+        <NavSection navConfig={sidebarConfig} />
+      </Scrollbar>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <ButtonStyle component={RouterLink} to="/dashboard/faq">
           <ItemIconStyle>{getIcon(calendarQuestionMkFilled)}</ItemIconStyle>
           <TextStyle>FAQ</TextStyle>
         </ButtonStyle>
       </Box>
-    </Scrollbar>
+    </>
   );
 
   return (

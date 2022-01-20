@@ -16,7 +16,7 @@ import {
   ListItemButton
 } from '@mui/material';
 //  icons
-import paintBrush from '@iconify/icons-fluent/paint-brush-arrow-up-24-filled';
+import colorPaletteFill from '@iconify/icons-eva/color-palette-fill';
 // components
 import MenuPopover from '../../components/MenuPopover';
 
@@ -93,7 +93,7 @@ export default function ThemePainelOver() {
           })
         }}
       >
-        <Icon icon={paintBrush} width={20} height={20} />
+        <Icon icon={colorPaletteFill} width={20} height={20} />
       </IconButton>
 
       <MenuPopover

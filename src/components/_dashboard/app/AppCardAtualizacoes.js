@@ -1,4 +1,3 @@
-import faker from 'faker';
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import { formatDistance } from 'date-fns';
@@ -6,22 +5,11 @@ import { Link as RouterLink } from 'react-router-dom';
 import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 // material
 import { Box, Stack, Link, Card, Button, Divider, Typography, CardHeader } from '@mui/material';
-// utils
-import { mockImgCover } from '../../../utils/mockImages';
+
 //
 import Scrollbar from '../../Scrollbar';
 
 // ----------------------------------------------------------------------
-
-const NEWS = [...Array(5)].map((_, index) => {
-  const setIndex = index + 1;
-  return {
-    title: faker.name.title(),
-    description: faker.lorem.paragraphs(),
-    image: mockImgCover(setIndex),
-    postedAt: faker.date.soon()
-  };
-});
 
 // ----------------------------------------------------------------------
 
@@ -57,14 +45,14 @@ function NewsItem({ news }) {
   );
 }
 
-export default function AppCardAtualizacoes({ chartData }) {
+export default function AppCardAtualizacoes({ data }) {
   return (
     <Card>
       <CardHeader title="Atualizações" />
 
       <Scrollbar>
         <Stack spacing={3} sx={{ p: 3, pr: 0 }}>
-          {NEWS.map((news) => (
+          {data.map((news) => (
             <NewsItem key={news.title} news={news} />
           ))}
         </Stack>

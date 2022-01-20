@@ -1,0 +1,56 @@
+[
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/pizza-shop.svg",
+    "loja_nome": "Venezloja I",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 1
+  },
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/pizza-shop.svg",
+    "loja_nome": "Venezloja II",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 1
+  },
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/pizza-shop.svg",
+    "loja_nome": "Venezloja III",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 0
+  },
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/pizza-shop.svg",
+    "loja_nome": "Venezloja IV",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 0
+  },
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/meat-shop.svg",
+    "loja_nome": "SuperBom I",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 1
+  },
+  {
+    "id_loja": "",
+    "loja_img": "/static/mock-images/config/meat-shop.svg",
+    "loja_nome": "SuperBom II",
+    "loja_endereco": "",
+    "loja_gerente": "",
+    "loja_funcionarios": [],
+    "loja_status": 1
+  }
+]

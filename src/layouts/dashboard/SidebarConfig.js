@@ -7,7 +7,7 @@ import lockFill from '@iconify/icons-eva/lock-fill';
 import personAddFill from '@iconify/icons-eva/person-add-fill';
 import alertTriangleFill from '@iconify/icons-eva/alert-triangle-fill';
 import pizzaFill from '@iconify/icons-fluent/food-pizza-20-filled';
-import meatIcon from '@iconify/icons-tabler/meat';
+import meatOnBone from '@iconify/icons-emojione-monotone/meat-on-bone';
 import areaChartOutlined from '@iconify/icons-ant-design/area-chart-outlined';
 import cogIcon from '@iconify/icons-heroicons-solid/cog';
 
@@ -47,7 +47,7 @@ const sidebarConfig = [
   {
     title: 'Açougue',
     path: '/dashboard/acougue',
-    icon: getIcon(meatIcon),
+    icon: getIcon(meatOnBone),
     children: [
       {
         title: 'Produtos',
@@ -80,7 +80,7 @@ const sidebarConfig = [
   },
   {
     title: 'Configurações',
-    path: '',
+    path: '/dashboard/config',
     icon: getIcon(cogIcon),
     children: [
       {

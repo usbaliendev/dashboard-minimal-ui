@@ -18,14 +18,14 @@ const GREY = {
   700: '#414141',
   800: '#2c2c2c',
   900: '#000000',
-  500_8: alpha('#919EAB', 0.08),
-  500_12: alpha('#919EAB', 0.12),
-  500_16: alpha('#919EAB', 0.16),
-  500_24: alpha('#919EAB', 0.24),
-  500_32: alpha('#919EAB', 0.32),
-  500_48: alpha('#919EAB', 0.48),
-  500_56: alpha('#919EAB', 0.56),
-  500_80: alpha('#919EAB', 0.8)
+  500_8: alpha('#414141', 0.08),
+  500_12: alpha('#414141', 0.12),
+  500_16: alpha('#414141', 0.16),
+  500_24: alpha('#414141', 0.24),
+  500_32: alpha('#414141', 0.32),
+  500_48: alpha('#414141', 0.48),
+  500_56: alpha('#414141', 0.56),
+  500_80: alpha('#414141', 0.8)
 };
 
 const PRIMARY = {
@@ -134,7 +134,7 @@ const palette = {
   chart: CHART_COLORS,
   chartX: { ...CHART_CX },
   divider: GREY[500_24],
-  text: { primary: GREY[900], secondary: GREY[700], disabled: GREY[500] },
+  text: { primary: GREY[900], secondary: GREY[800], disabled: GREY[500] },
   themes: {
     lightbg: THEMES.light_bg,
     lightsubbg: THEMES.light_susbbg,

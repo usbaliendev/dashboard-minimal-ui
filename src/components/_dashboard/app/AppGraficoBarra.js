@@ -32,7 +32,7 @@ export default function AppGraficoBarra({ chartData }) {
 
   return (
     <Card>
-      <CardHeader title="Conversion Rates" subheader="(+43%) than last year" />
+      <CardHeader title={chartData.title} subheader={chartData.description} />
       <Box sx={{ mx: 3 }} dir="ltr">
         <ReactApexChart type="bar" series={chartData.series} options={chartOptions} height={320} />
       </Box>

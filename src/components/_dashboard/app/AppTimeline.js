@@ -17,7 +17,7 @@ import { fDateTime } from '../../../utils/formatTime';
 
 const TIMELINES = [
   {
-    title: '1983, pedidos, $4220',
+    title: 'Pedido #1983, R$ 422,00',
     time: faker.date.past(),
     type: 'pedido1'
   },

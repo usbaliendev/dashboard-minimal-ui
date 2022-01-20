@@ -5,7 +5,7 @@ import Page from '../components/Page';
 import {
   AppTasks,
   AppCardAtualizacoes,
-  AppOrderTimeline,
+  AppTimeline,
   AppGraficoPizza,
   AppGraficoLA,
   AppTrafficBySite,

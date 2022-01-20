@@ -21,6 +21,10 @@ import PaineisTelas from './pages/acougue/PaineisTelas';
 
 import Relatorios from './pages/Relatorios';
 
+import CfgProdutos from './pages/config/CfgProdutos';
+import CfgUsers from './pages/config/CfgUsers';
+import CfgLojas from './pages/config/CfgLojas';
+
 import Tabela from './pages/Tabela';
 import Products from './pages/Products';
 import Blog from './pages/Blog';
@@ -37,10 +41,6 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" replace /> },
         { path: 'app', element: <DashboardApp /> },
 
-        { path: 'relatorios/pizzas', element: <Pizzas /> },
-        { path: 'relatorios/acougue', element: <Acougue /> },
-        { path: 'produtos/config', element: <Products /> },
-
         { path: 'pizzas/categorias', element: <Categorias /> },
         { path: 'pizzas/sabores', element: <Sabores /> },
         { path: 'pizzas/ingredientes', element: <Ingredientes /> },
@@ -49,6 +49,13 @@ export default function Router() {
         { path: 'acougue/produtos', element: <Produtos /> },
         { path: 'acougue/tabelaprecos', element: <TabelaPrecos /> },
         { path: 'acougue/paineis&telas', element: <PaineisTelas /> },
+
+        { path: 'relatorios/pizzas', element: <Pizzas /> },
+        { path: 'relatorios/acougue', element: <Acougue /> },
+
+        { path: 'config/produtos', element: <CfgProdutos /> },
+        { path: 'config/usuarios', element: <CfgUsers /> },
+        { path: 'config/lojas', element: <CfgLojas /> },
 
         { path: 'tabela', element: <Tabela /> },
         { path: 'products', element: <Products /> },

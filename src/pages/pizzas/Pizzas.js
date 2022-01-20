@@ -1,21 +1,23 @@
+import faker from 'faker/locale/pt_BR';
+import bxsShoppingBag from '@iconify/icons-bx/bxs-shopping-bag';
+import shoppingCart from '@iconify/icons-el/shopping-cart';
+import moneyAlt from '@iconify/icons-dashicons/money-alt';
+import packageV from '@iconify/icons-mdi/package-variant';
 // material
 import { Box, Grid, Container, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 // components
 import Page from '../../components/Page';
 import {
-  AppCardVendasD,
-  AppCardVendasT,
-  AppCardPedidosT,
-  AppCardReceitaM,
+  AppCardInfo,
   AppGraficoLA,
-  AppTasks,
   AppCardAtualizacoes,
-  AppOrderTimeline,
+  AppTimeline,
   AppGraficoPizza,
-  AppTrafficBySite,
-  AppGraficoRadar,
   AppGraficoBarra
 } from '../../components/_dashboard/app';
+// utils
+import { mockImgCover } from '../../utils/mockImages';
 
 // ----------------------------------------------------------------------
 
@@ -69,7 +71,52 @@ const BARRA_CHART = {
   xaxis: ['A', 'B', 'C', 'D', 'E', 'F']
 };
 
+const NEWS = [...Array(5)].map((_, index) => {
+  const setIndex = index + 1;
+  return {
+    title: faker.name.title(),
+    description: faker.lorem.paragraphs(),
+    image: mockImgCover(setIndex),
+    postedAt: faker.date.soon()
+  };
+});
+
 export default function Pizzas() {
+  const theme = useTheme();
+
+  const CARD1 = {
+    value: 14000,
+    title: 'Vendas Totais',
+    icon: bxsShoppingBag,
+    color: theme.palette.primary.darker,
+    bgColor: theme.palette.primary.lighter,
+    color2: theme.palette.primary.dark
+  };
+  const CARD2 = {
+    value: 573,
+    title: 'Vendas Diárias',
+    icon: shoppingCart,
+    color: theme.palette.info.darker,
+    bgColor: theme.palette.info.lighter,
+    color2: theme.palette.info.dark
+  };
+  const CARD3 = {
+    value: 53450,
+    title: 'Receita Mensal',
+    icon: moneyAlt,
+    color: theme.palette.success.darker,
+    bgColor: theme.palette.success.lighter,
+    color2: theme.palette.success.dark
+  };
+  const CARD4 = {
+    value: 15000,
+    title: 'Pedidos Totais',
+    icon: packageV,
+    color: theme.palette.warning.darker,
+    bgColor: theme.palette.warning.lighter,
+    color2: theme.palette.warning.dark
+  };
+
   return (
     <Page title="Dashboard | Pizzas">
       <Container maxWidth="xl">
@@ -78,16 +125,16 @@ export default function Pizzas() {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppCardVendasT />
+            <AppCardInfo data={CARD1} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppCardVendasD />
+            <AppCardInfo data={CARD2} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppCardReceitaM />
+            <AppCardInfo data={CARD3} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <AppCardPedidosT />
+            <AppCardInfo data={CARD4} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
@@ -103,11 +150,11 @@ export default function Pizzas() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
-            <AppCardAtualizacoes />
+            <AppCardAtualizacoes data={NEWS} />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline />
+            <AppTimeline />
           </Grid>
         </Grid>
       </Container>

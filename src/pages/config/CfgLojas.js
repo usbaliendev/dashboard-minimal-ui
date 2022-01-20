@@ -21,23 +21,24 @@ import {
   TablePagination
 } from '@mui/material';
 // components
-import Page from '../components/Page';
-import Label from '../components/Label';
-import Scrollbar from '../components/Scrollbar';
-import SearchNotFound from '../components/SearchNotFound';
-import { ListHead, ListToolbar } from '../components/_dashboard/table';
-import MoreMenu from '../components/MoreMenu';
+import Page from '../../components/Page';
+import Label from '../../components/Label';
+import Scrollbar from '../../components/Scrollbar';
+import SearchNotFound from '../../components/SearchNotFound';
+import { ListHead, ListToolbar } from '../../components/_dashboard/table';
+import MoreMenu from '../../components/MoreMenu';
 // utils
-import USERLIST from '../_mocks_/user';
+import LOJAS from '../../_mocks_/config/cfglojas';
 
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  { id: 'id', label: 'ID', align: 'center' },
+  { id: 'nome', label: 'Nome', align: 'center' },
+  { id: 'endereco', label: 'Endereço', align: 'center' },
+  { id: 'gerente', label: 'Gerente', align: 'center' },
+  { id: 'funcionarios', label: 'Funcionarios', align: 'left' },
+  { id: 'status', label: 'Status', align: 'center' },
   { id: '' }
 ];
 
@@ -72,7 +73,7 @@ function applySortFilter(array, comparator, query) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-export default function Tabela() {
+export default function CfgLojas() {
   const [page, setPage] = useState(0);
   const [order, setOrder] = useState('asc');
   const [selected, setSelected] = useState([]);
@@ -88,7 +89,7 @@ export default function Tabela() {
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
-      const newSelecteds = USERLIST.map((n) => n.name);
+      const newSelecteds = LOJAS.map((n) => n.name);
       setSelected(newSelecteds);
       return;
     }
@@ -126,26 +127,24 @@ export default function Tabela() {
     setFilterName(event.target.value);
   };
 
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - USERLIST.length) : 0;
+  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - LOJAS.length) : 0;
 
-  const filteredUsers = applySortFilter(USERLIST, getComparator(order, orderBy), filterName);
+  const filteredUsers = applySortFilter(LOJAS, getComparator(order, orderBy), filterName);
 
   const isUserNotFound = filteredUsers.length === 0;
 
   return (
-    <Page title="Tabela | Minimal-UI">
+    <Page title="Dashboard | Configurações">
       <Container>
-        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
-          <Typography variant="h4" gutterBottom>
-            Tabela
-          </Typography>
+        <Stack direction="row" alignItems="center" justifyContent="space-between" mb={2}>
+          <Typography variant="h4">Configurações | Lojas</Typography>
           <Button
             variant="contained"
             component={RouterLink}
             to="#"
             startIcon={<Icon icon={plusFill} />}
           >
-            Nova Entrada
+            Nova Loja
           </Button>
         </Stack>
 
@@ -157,13 +156,13 @@ export default function Tabela() {
           />
 
           <Scrollbar>
-            <TableContainer sx={{ minWidth: 800 }}>
+            <TableContainer sx={{ minWidth: 800, px: 3 }}>
               <Table>
                 <ListHead
                   order={order}
                   orderBy={orderBy}
                   headLabel={TABLE_HEAD}
-                  rowCount={USERLIST.length}
+                  rowCount={LOJAS.length}
                   numSelected={selected.length}
                   onRequestSort={handleRequestSort}
                   onSelectAllClick={handleSelectAllClick}
@@ -172,7 +171,7 @@ export default function Tabela() {
                   {filteredUsers
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row) => {
-                      const { id, name, role, status, company, avatarUrl, isVerified } = row;
+                      const { id, cover, name, endereco, gerente, funcionarios, status } = row;
                       const isItemSelected = selected.indexOf(name) !== -1;
 
                       return (
@@ -190,27 +189,45 @@ export default function Tabela() {
                               onChange={(event) => handleClick(event, name)}
                             />
                           </TableCell>
-                          <TableCell component="th" scope="row" padding="none">
+                          <TableCell align="center" padding="normal">
+                            {id}
+                          </TableCell>
+                          {/* <TableCell align="center" padding="none">
+                            {idctg}
+                          </TableCell> */}
+                          <TableCell
+                            align="center"
+                            padding="none"
+                            component="th"
+                            scope="row"
+                            size="small"
+                          >
                             <Stack direction="row" alignItems="center" spacing={2}>
-                              <Avatar alt={name} src={avatarUrl} />
+                              <Avatar alt={name} src={cover} />
                               <Typography variant="subtitle2" noWrap>
                                 {name}
                               </Typography>
                             </Stack>
                           </TableCell>
-                          <TableCell align="left">{company}</TableCell>
-                          <TableCell align="left">{role}</TableCell>
-                          <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
-                          <TableCell align="left">
+                          <TableCell align="center" padding="none">
+                            {endereco}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
+                            {gerente}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
+                            {funcionarios}
+                          </TableCell>
+                          <TableCell align="center" padding="none">
                             <Label
                               variant="ghost"
-                              color={(status === 'banned' && 'error') || 'success'}
+                              color={(status === 'desativado' && 'error') || 'active'}
                             >
                               {sentenceCase(status)}
                             </Label>
                           </TableCell>
 
-                          <TableCell align="right">
+                          <TableCell align="right" padding="none">
                             <MoreMenu />
                           </TableCell>
                         </TableRow>
@@ -236,13 +253,15 @@ export default function Tabela() {
           </Scrollbar>
 
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
+            rowsPerPageOptions={[10, 25, 50, 75, 100]}
             component="div"
-            count={USERLIST.length}
+            count={LOJAS.length}
             rowsPerPage={rowsPerPage}
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
+            labelRowsPerPage="Itens por página"
+            sx={{ pr: 4 }}
           />
         </Card>
       </Container>

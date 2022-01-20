@@ -10,5 +10,15 @@ Logo.propTypes = {
 };
 
 export default function Logo({ sx }) {
-  return <Box component="img" src={cleverLogo} sx={{ width: 172, height: 40, ...sx }} />;
+  return (
+    <Box
+      component="img"
+      src={cleverLogo}
+      sx={{
+        width: 172,
+        height: 40,
+        ...sx
+      }}
+    />
+  );
 }
