@@ -1,14 +1,13 @@
 import { Link as RouterLink } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
-import { Card, Stack, Link, Container, Typography } from '@mui/material';
+import { Box, Card, Stack, Link, Container, Typography } from '@mui/material';
 // layouts
 import AuthLayout from '../layouts/AuthLayout';
 // components
 import Page from '../components/Page';
 import { MHidden } from '../components/@material-extend';
 import { LoginForm } from '../components/authentication/login';
-import AuthSocial from '../components/authentication/AuthSocial';
 
 // ----------------------------------------------------------------------
 
@@ -51,10 +50,12 @@ export default function Login() {
 
       <MHidden width="mdDown">
         <SectionStyle>
-          <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
+          <Typography variant="h4" sx={{ px: 5, mt: 10, mb: 1 }}>
             Olá, Bem vindo de Volta
           </Typography>
-          <img src="/static/illustrations/illustration_login.png" alt="login" />
+          <Box sx={{ w: 420 }}>
+            <img src="/static/illustrations/world-loc.svg" alt="login" />
+          </Box>
         </SectionStyle>
       </MHidden>
 

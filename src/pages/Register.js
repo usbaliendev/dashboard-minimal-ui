@@ -55,7 +55,7 @@ export default function Register() {
             Gerencie o trabalho de forma mais eficaz com o nosso <br />
             Dashboard de Produtos
           </Typography>
-          <img alt="register" src="/static/illustrations/illustration_register.png" />
+          <img alt="register" src="/static/illustrations/register.svg" />
         </SectionStyle>
       </MHidden>
 
@@ -69,8 +69,6 @@ export default function Register() {
               Basta pedir um cadastro com a Clever ou o Admin da sua empresa.
             </Typography>
           </Box>
-
-          {/* <AuthSocial /> */}
 
           <RegisterForm />
 
@@ -88,9 +86,9 @@ export default function Register() {
 
           <MHidden width="smUp">
             <Typography variant="subtitle2" sx={{ mt: 3, textAlign: 'center' }}>
-              Already have an account?&nbsp;
+              Já possui uma conta?&nbsp;
               <Link to="/login" component={RouterLink}>
-                Login
+                Logar
               </Link>
             </Typography>
           </MHidden>

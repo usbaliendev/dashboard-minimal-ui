@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled } from '@mui/material/styles';
-import { Box, Link, Divider, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
+import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
 // components
 import { Icon, InlineIcon } from '@iconify/react';
 import calendarQuestionMkFilled from '@iconify/icons-fluent/calendar-question-mark-16-filled';

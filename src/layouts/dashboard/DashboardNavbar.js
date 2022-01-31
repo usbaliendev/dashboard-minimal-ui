@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import menu2Fill from '@iconify/icons-eva/menu-2-fill';
 // material
@@ -9,9 +10,10 @@ import { MHidden } from '../../components/@material-extend';
 //
 import Searchbar from './Searchbar';
 import AccountPopover from './AccountPopover';
-import LanguagePopover from './LanguagePopover';
 import ThemePainelOver from './ThemePainelOver';
 import NotificationsPopover from './NotificationsPopover';
+
+import ThemeSidebar from '../../components/_dashboard/themes/ThemeSidebar';
 
 // ----------------------------------------------------------------------
 
@@ -44,6 +46,16 @@ DashboardNavbar.propTypes = {
 };
 
 export default function DashboardNavbar({ onOpenSidebar }) {
+  const [openTheme, setOpenTheme] = useState(false);
+
+  const handleOpenTheme = () => {
+    setOpenTheme(true);
+  };
+
+  const handleCloseTheme = () => {
+    setOpenTheme(false);
+  };
+
   return (
     <RootStyle>
       <ToolbarStyle>
@@ -58,6 +70,11 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 
         <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
           <NotificationsPopover />
+          <ThemeSidebar
+            isOpenTheme={openTheme}
+            onOpenTheme={handleOpenTheme}
+            onCloseTheme={handleCloseTheme}
+          />
           <ThemePainelOver />
           <AccountPopover />
         </Stack>

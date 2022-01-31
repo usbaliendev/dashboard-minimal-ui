@@ -28,6 +28,8 @@ import CfgLojas from './pages/config/CfgLojas';
 import Tabela from './pages/Tabela';
 import Products from './pages/Products';
 import Blog from './pages/Blog';
+
+import FAQ from './pages/FAQ';
 import NotFound from './pages/Page404';
 
 // ----------------------------------------------------------------------
@@ -60,7 +62,8 @@ export default function Router() {
         { path: 'tabela', element: <Tabela /> },
         { path: 'products', element: <Products /> },
         { path: 'blog', element: <Blog /> },
-        { path: 'faq', element: <Blog /> }
+
+        { path: 'faq', element: <FAQ /> }
       ]
     },
     {
